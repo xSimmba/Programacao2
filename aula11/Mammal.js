@@ -4,8 +4,8 @@ export default class Mammal extends Animal {
 
     #numLegs;
 
-    constructor({name, numLegs, image}){
-        super(name);
+    constructor({name, numLegs, image}, callback){
+        super(name, image, callback);
 
         this.#numLegs = numLegs;
     }

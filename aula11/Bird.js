@@ -4,8 +4,8 @@ export default class Bird extends Animal {
 
     #canFly;
 
-    constructor({name, canFly, image}){
-        super(name, image);
+    constructor({name, canFly, image}, callback){
+        super(name, image, callback);
 
         this.#canFly = canFly;
     }

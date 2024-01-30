@@ -4,8 +4,8 @@ export default class Reptile extends Animal {
 
     #isAgressive
 
-    constructor({name, isAgressive, image}){
-        super(name);
+    constructor({name, isAgressive, image}, callback){
+        super(name, image, callback);
         this.#isAgressive = isAgressive;
     }
     bite()  {

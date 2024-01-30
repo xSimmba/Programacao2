@@ -5,20 +5,22 @@ import Reptile from "./Reptile.js";
 
 export default class Zoo {
     #animals;
-    constructor() {
+    #callback;
+    constructor(callback) {
         this.#animals = [];
+        this.#callback = callback;
     }
 
     addAnimal (animal) {
         switch (animal.type) {
             case "bird":
-                this.#animals.push(new Bird(animal));
+                this.#animals.push(new Bird(animal, this.#callback));
                 break;
             case "mammal":
-                this.#animals.push(new Mammal(animal));
+                this.#animals.push(new Mammal(animal, this.#callback));
                 break;
             case "reptile":
-                this.#animals.push(new Reptile(animal));
+                this.#animals.push(new Reptile(animal, this.#callback));
                 break;
         
             default:
@@ -34,5 +36,9 @@ export default class Zoo {
 
     getAnimal(name) {
         return this.#animals.find(animal => animal.name === name);
+    }
+    static ZooInfo(){
+    
+        return "A zoo is a place to display aniamls";
     }
 }
