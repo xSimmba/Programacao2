@@ -37,10 +37,23 @@ window.onload = () => {
 //    console.log(sumresult/arr.length);
 
 
-   const mix = [12, 345, 123, 1, 34, 56, 7,789,239]
+//   const mix = [12, 345, 123, 1, 34, 56, 7,789,239]
 
-    mix.forEach(i => {
-        console.log(i)
-    })
+//    mix.forEach(i => {
+ //       console.log(i)
+ //   }
+
+
+    class Test {
+        constructor() {
+            
+        }
+        showNumber() {
+            return 2;
+        }
+
+    }
 }
+
+console.log(new Test().shownumber());
 
