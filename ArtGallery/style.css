@@ -1,0 +1,58 @@
+body{
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}    
+
+
+.image-container{
+    
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.image-container img{
+    width: 20rem;
+    height: 20rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    transition: 0.5s;
+    background-color: aquamarine;
+}
+.image-container img:hover{
+    transform: scale(1.1) rotate(3deg);
+}
+
+
+.Name-container{
+    width: 800px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: blueviolet;
+
+}
+
+.p-container{
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+
