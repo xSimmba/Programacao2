@@ -24,4 +24,20 @@ export default class Gallery {
                 break;
         }
     }
+    rmvArtPiece(data){
+        switch (data.type) {
+            case "Painting":
+                this.artPieces.remove(new Painting(data))
+                break;
+            case "Sculpture":
+                this.artPieces.remove(new Sculpture(data))
+            break;
+            case "Photo":
+                this.artPieces.remove(new Photo(data))
+            break;
+        
+            default:
+                break;
+        }
+    }
 }
