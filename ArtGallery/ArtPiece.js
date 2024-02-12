@@ -19,17 +19,28 @@ export default class ArtPiece {
 
 
        
+        let isInfoShowing = false;
+
         div.onclick = () => {
 
-            const h1 = document.createElement("h1");
-            h1.className = "Name-container";
-            h1.innerText = data.title + " by " + data.artist;
-            infoContainer.appendChild(h1);
-            
-            const p = document.createElement("p");
-            p.className = "p-container";
-            p.innerText = " Medium: " + data.medium;
-            infoContainer.appendChild(p);
+            if(isInfoShowing === true) {
+                infoContainer.innerHTML = "";
+                isInfoShowing = false
+            }else{
+
+                const h1 = document.createElement("h1");
+                h1.className = "Name-container";
+                h1.innerText = data.title + " by " + data.artist;
+                infoContainer.appendChild(h1);
+                const p = document.createElement("p");
+                p.className = "p-container";
+                p.innerText = " Medium: " + data.medium;
+                infoContainer.appendChild(p);
+
+                isInfoShowing = true;
+                
+            }
+
             
             }
         
