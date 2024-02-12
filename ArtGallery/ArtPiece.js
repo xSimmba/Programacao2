@@ -10,7 +10,8 @@ export default class ArtPiece {
         const image = document.createElement("img");
         image.src = data.image;
         div.appendChild(image);
-        
+        const infoContainer = document.createElement("div")
+        div.appendChild(infoContainer)
     
 
         document.body.appendChild(div);
@@ -23,11 +24,12 @@ export default class ArtPiece {
             const h1 = document.createElement("h1");
             h1.className = "Name-container";
             h1.innerText = data.title + " by " + data.artist;
-            div.appendChild(h1);
+            infoContainer.appendChild(h1);
+            
             const p = document.createElement("p");
             p.className = "p-container";
             p.innerText = " Medium: " + data.medium;
-            div.appendChild(p);
+            infoContainer.appendChild(p);
             
             }
         
