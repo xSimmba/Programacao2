@@ -23,6 +23,7 @@ window.onload = async () => {
        
         switch (button.innerText) {
             case "View Gallery":
+                button.className = "GoBack"
                 button.innerText = "Close Gallery";
                 break;
             case "Close Gallery":
@@ -33,11 +34,7 @@ window.onload = async () => {
                 document.body.appendChild(button);
                 break;
 
-        };
-
-        button.className = "GoBack";
-
-        
+        };  
     };
     
     
