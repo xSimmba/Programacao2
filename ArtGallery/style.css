@@ -11,6 +11,12 @@ body{
     background-color: black;
 }    
 
+.GalDescription{
+    text-align: center;
+    color: #fff;
+    font-style: italic;
+}
+
 
 .image-container{
     width: 60%;

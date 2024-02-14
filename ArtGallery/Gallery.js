@@ -5,19 +5,22 @@ import Sculpture from "./Sculpture.js";
 export default class Gallery {
 
     artPieces = [];
+    callback;
 
-    constructor(){}
+    constructor(callback){
+        this.callback=callback;
+    }
 
     addArtPiece(data){
         switch (data.type) {
             case "Painting":
-                this.artPieces.push(new Painting(data))
+                this.artPieces.push(new Painting(data,()=>{this.callback(data)}))
                 break;
             case "Sculpture":
-                this.artPieces.push(new Sculpture(data))
+                this.artPieces.push(new Sculpture(data,()=>{this.callback(data)}))
             break;
             case "Photo":
-                this.artPieces.push(new Photo(data))
+                this.artPieces.push(new Photo(data,()=>{this.callback(data)}))
             break;
         
             default:

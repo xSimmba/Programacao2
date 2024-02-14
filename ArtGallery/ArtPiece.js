@@ -1,7 +1,8 @@
 export default class ArtPiece {
-    constructor(data){
+    callback;
+    constructor(data, callback){
 
-
+        this.callback=callback;
       
 
         const div = document.createElement("div");
@@ -22,7 +23,7 @@ export default class ArtPiece {
         let isInfoShowing = false;
 
         div.onclick = () => {
-
+            this.callback(data)
             if(isInfoShowing === true) {
                 infoContainer.innerHTML = "";
                 isInfoShowing = false
